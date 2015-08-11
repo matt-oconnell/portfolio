@@ -1,11 +1,11 @@
 =v-center
+    -webkit-transform: translateY(-50%)
     position: relative
     top: 50%
-    -webkit-transform: translateY(-50%)
 =bg-full
+    background-size: cover
     height: 100%
     width: 100%
-    background-size: cover
 
 html
     height: 100%
@@ -20,15 +20,18 @@ body
     margin: 0
     +bg-full
     &:after
-        content: ''
-        position: fixed
-        top: 10px
-        right: 10px
-        bottom: 10px
-        left: 10px
         border: 1px solid rgba(255,255,255,.2)
+        position: fixed
+        bottom: 10px
+        right: 10px
+        left: 10px
+        top: 10px
+        content: ''
 p
     margin: 0
+
+a
+    color: white
 
 .pattern
     background-image: url(../img/pattern.png)
@@ -42,51 +45,55 @@ p
 [section-id="intro"]
     text-align: center
     .title
-        font-size: 28px
         font-family: 'Josefin Slab', sans-serif
+        font-size: 28px
         margin: 5px
     .subtitle
         font-size: 20px
     .icons
         position: absolute
+        text-align: center
         bottom: 27px
         width: 100%
-        text-align: center
         left: 0
         a
+            background-image: url(../img/github.png)
+            -webkit-transition: all .25s
+            background-size: cover
             display: inline-block
             height: 27px
             width: 27px
-            background-image: url(../img/github.png)
-            background-size: cover
-            -webkit-transition: all .25s
             opacity: .5
             &:last-child
-                margin-left: 20px
                 background-image: url(../img/linkedin.png)
+                margin-left: 20px
             &:hover
                 opacity: .9
 
 [section-id="about"]
     p
-        font-family: 'Economica'
-        letter-spacing: auto
-
-
+        font-family: 'Economica', sans-serif
+        margin-bottom: 15px
+    img
+        width: 20%
+        max-width: 120px
+        border-radius: 50%
+        display: block
+        margin: 0 auto 20px auto
 
 .title-wrap
     text-align: center
-    height: 10%
-    width: 100%
     display: table
     margin: 5% 0
+    height: 10%
+    width: 100%
     h1
-        display: table-cell
+        font-family: 'Josefin Slab', sans-serif
         vertical-align: middle
-        margin: 0
+        display: table-cell
         font-weight: 300
         font-size: 28px
-        font-family: 'Josefin Slab', sans-serif
+        margin: 0
 
 .wrap
     position: absolute
@@ -116,7 +123,6 @@ p
         -webkit-tap-highlight-color: rgba(0,0,0,0)
         width: 30%
         padding: 0 2%
-        color: white
         text-decoration: none
         display: inline-block
         box-sizing: border-box

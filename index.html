@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- The style of this homepage was STRONGLY inspired by this very cool website http://davegamache.com/ -->
 	<head>
 		<title>Matt O'Connell</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +12,8 @@
 	<body>
         <div class="nav">
             <a href="intro">First</a>
-            <a href="grid">Second</a>
-            <a href="about">Third</a>
+            <a href="grid">Work</a>
+            <a href="about">About</a>
         </div>
         <div class="pattern"></div>
 
@@ -31,7 +32,7 @@
         <!-- Grid -->
         <div class="wrap" section-id="grid">
             <div class="title-wrap">
-                <h1>Second</h1>
+                <h1>Work</h1>
             </div>
             <div class="grid-wrap">
                 <div class="grid">
@@ -61,10 +62,12 @@
         <!-- About -->
         <div class="wrap" section-id="about">
             <div class="title-wrap">
-                <h1>Third</h1>
+                <h1>About</h1>
             </div>
-            <p>Now whenever the browser window's size is changed, the message is appended to one or more times, depending on the browser.</p>
-            <p>Code in a resize handler should never rely on the number of times the handler is called. Depending on implementation, resize events can be sent continuously as the resizing is in progress (the typical behavior in Internet Explorer and WebKit-based browsers such as Safari and Chrome), or only once at the end of the resize operation (the typical behavior in some other browsers such as Opera).</p>
+            <img src="assets/img/bio.png">
+            <p>I'm a web developer living in Brooklyn, NY.</p>
+            <p>Currently, I'm employed as Chief Front End Engineer at a company called Blue Bite. <a href="http://bluebite.com">Check us out!</a> We're doing some pretty cool things centered around augmenting everyday experiences with technology.</p>
+            <p>Please connect via LinkedIn or send me an email if you're looking to hire for freelance work.</p>
         </div>
 
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -74,7 +77,6 @@
         $( document ).ready(function() {
 
             FastClick.attach(document.body);
-
             resizeGrid();
 
             $('.nav a').click(function() {
