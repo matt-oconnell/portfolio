@@ -1,0 +1,137 @@
+=v-center
+    position: relative
+    top: 50%
+    -webkit-transform: translateY(-50%)
+=bg-full
+    height: 100%
+    width: 100%
+    background-size: cover
+
+html
+    height: 100%
+body
+    background-image: url(../img/bg.png)
+    font-family: 'Economica', sans-serif
+    letter-spacing: 1.5px
+    position: relative
+    font-weight: 300
+    color: white
+    margin: 0
+    +bg-full
+    &:after
+        content: ''
+        position: fixed
+        top: 10px
+        right: 10px
+        bottom: 10px
+        left: 10px
+        border: 1px solid rgba(255,255,255,.2)
+p
+    margin: 0
+
+.pattern
+    background-image: url(../img/pattern.png)
+    position: absolute
+    opacity: .03
+    +bg-full
+
+.v-align
+    +v-center
+
+.intro
+    text-align: center
+    .title
+        font-size: 28px
+        font-family: 'Josefin Slab', sans-serif
+        margin: 5px
+    .subtitle
+        font-size: 20px
+
+
+[section-id="about"], [section-id="grid"]
+    .v-align
+
+
+
+.title-wrap
+    text-align: center
+    height: 10%
+    width: 100%
+    display: table
+    margin: 5% 0
+    h1
+        display: table-cell
+        vertical-align: middle
+        margin: 0
+        font-weight: 300
+        font-size: 28px
+        font-family: 'Josefin Slab', sans-serif
+
+.wrap
+    position: absolute
+    height: 100%
+    width: 100%
+    padding: 60px 40px 30px 40px
+    box-sizing: border-box
+    z-index: 1
+    visibility: hidden
+    opacity: 0
+    -webkit-transition: all .5s
+    &[section-id="intro"]
+        padding: 30px 40px 30px 40px
+    &.active
+        opacity: 1
+        visibility: visible
+        -webkit-transition: opacity .5s
+
+/* Navigation */
+.nav
+    position: absolute
+    width: 100%
+    text-align: center
+    padding-top: 40px
+    z-index: 2
+    a
+        -webkit-tap-highlight-color: rgba(0,0,0,0)
+        width: 30%
+        padding: 0 2%
+        color: white
+        text-decoration: none
+        display: inline-block
+        box-sizing: border-box
+        &::before, &::after
+            display: inline-block
+            opacity: 0
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.2s
+        &::before
+            margin-right: 10px
+            content: '['
+            -webkit-transform: translateX(20px)
+        &::after
+            margin-left: 10px
+            content: ']'
+            -webkit-transform: translateX(-20px)
+        &:hover::before, &:hover::after, &:focus::before, &:focus::after
+            opacity: 1
+            -webkit-transform: translateX(0px)
+.grid-wrap
+    height: 80%
+    .grid
+        width: 100%
+        max-height: 100%
+        overflow-y: scroll
+        -webkit-overflow-scrolling: touch
+        &::-webkit-scrollbar
+            display: none
+        .piece
+            -webkit-transition: all .25s
+            background-color: black
+            width: 30%
+            margin-right: 5%
+            margin-bottom: 5%
+            height: 100px
+            float: left
+            &:nth-child(3n)
+                margin-right: 0
+        br
+            clear: both

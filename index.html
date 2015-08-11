@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Matt O'Connell</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Raleway:300,400,700|Ubuntu:300,400,700|Play:300,400,700|Orbitron:300,400,700|Amatic+SC:300,400,700|Economica:300,400,700|Carme:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="assets/styles/style.css">
+	</head>
+
+	<body>
+        <div class="nav">
+            <a href="intro">First</a>
+            <a href="grid">Second</a>
+            <a href="about">Third</a>
+        </div>
+        <div class="pattern"></div>
+
+        <!-- Intro -->
+        <div class="wrap active" section-id="intro">
+            <div class="intro v-align">
+                <p class="title">Something Here</p>
+                <p class="subtitle">Example</p>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="wrap" section-id="grid">
+            <div class="title-wrap">
+                <h1>Second</h1>
+            </div>
+            <div class="grid-wrap">
+                <div class="grid">
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <div class="piece"></div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="wrap" section-id="about">
+            <div class="title-wrap">
+                <h1>Third</h1>
+            </div>
+            <p>Text, Text</p>
+            <p>Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text, Text</p>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+	</body>
+    <script>
+        $( document ).ready(function() {
+            FastClick.attach(document.body);
+            $('.nav a').click(function() {
+                var selected = $(this).attr('href'),
+                    selectedEl = $('[section-id="'+selected+'"]');
+                if(!selectedEl.hasClass('active')) {
+                    $('.active').removeClass('active');
+                    selectedEl.addClass('active');
+                }
+                return false;
+            })
+        });
+    </script>
+</html>
