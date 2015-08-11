@@ -68,7 +68,11 @@
 	</body>
     <script>
         $( document ).ready(function() {
+
             FastClick.attach(document.body);
+
+            resizeGrid();
+
             $('.nav a').click(function() {
                 var selected = $(this).attr('href'),
                     selectedEl = $('[section-id="'+selected+'"]');
@@ -77,7 +81,17 @@
                     selectedEl.addClass('active');
                 }
                 return false;
-            })
+            });
+
+            function resizeGrid() {
+                var gridPiece = $('.piece');
+                gridPiece.height(gridPiece.width());
+            }
+
+            $( window ).resize(function() {
+                resizeGrid();
+            });
+
         });
     </script>
 </html>
