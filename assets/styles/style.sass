@@ -38,7 +38,7 @@ p
 .v-align
     +v-center
 
-.intro
+[section-id="intro"]
     text-align: center
     .title
         font-size: 28px
@@ -46,10 +46,30 @@ p
         margin: 5px
     .subtitle
         font-size: 20px
+    .icons
+        position: absolute
+        bottom: 27px
+        width: 100%
+        text-align: center
+        left: 0
+        a
+            display: inline-block
+            height: 27px
+            width: 27px
+            background-image: url(../img/github.png)
+            background-size: cover
+            -webkit-transition: all .25s
+            opacity: .5
+            &:last-child
+                margin-left: 20px
+                background-image: url(../img/linkedin.png)
+            &:hover
+                opacity: .9
 
-
-[section-id="about"], [section-id="grid"]
-    .v-align
+[section-id="about"]
+    p
+        font-family: 'Economica'
+        letter-spacing: auto
 
 
 

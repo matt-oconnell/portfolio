@@ -37,14 +37,37 @@ p {
   top: 50%;
   -webkit-transform: translateY(-50%); }
 
-.intro {
+[section-id="intro"] {
   text-align: center; }
-  .intro .title {
+  [section-id="intro"] .title {
     font-size: 28px;
     font-family: "Josefin Slab", sans-serif;
     margin: 5px; }
-  .intro .subtitle {
+  [section-id="intro"] .subtitle {
     font-size: 20px; }
+  [section-id="intro"] .icons {
+    position: absolute;
+    bottom: 27px;
+    width: 100%;
+    text-align: center;
+    left: 0; }
+    [section-id="intro"] .icons a {
+      display: inline-block;
+      height: 27px;
+      width: 27px;
+      background-image: url(../img/github.png);
+      background-size: cover;
+      -webkit-transition: all 0.25s;
+      opacity: 0.5; }
+      [section-id="intro"] .icons a:last-child {
+        margin-left: 20px;
+        background-image: url(../img/linkedin.png); }
+      [section-id="intro"] .icons a:hover {
+        opacity: 0.9; }
+
+[section-id="about"] p {
+  font-family: "Economica";
+  letter-spacing: auto; }
 
 .title-wrap {
   text-align: center;
