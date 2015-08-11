@@ -2,6 +2,7 @@ html {
   height: 100%; }
 
 body {
+  -webkit-text-size-adjust: none;
   background-image: url(../img/bg.png);
   font-family: "Economica", sans-serif;
   letter-spacing: 1.5px;
