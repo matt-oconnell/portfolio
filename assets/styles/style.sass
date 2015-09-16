@@ -141,7 +141,7 @@ a
         &:hover::before, &:hover::after, &:focus::before, &:focus::after
             opacity: 1
             -webkit-transform: translateX(0px)
-.about-wrap
+.about-wrap, .work-wrap
     height: 80%
     .about-content
         width: 100%
@@ -150,6 +150,18 @@ a
         -webkit-overflow-scrolling: touch
         &::-webkit-scrollbar
             display: none
+.work-wrap
+    width: 100%
+    max-height: 100%
+    overflow-y: scroll
+    -webkit-overflow-scrolling: touch
+    max-width: 600px
+    margin: 0 auto
+    &::-webkit-scrollbar
+        display: none
+    a
+        padding: 10px 10px 10px 0
+        display: block
 .grid-wrap
     height: 80%
     .grid
@@ -167,7 +179,28 @@ a
             margin-bottom: 5%
             height: 100px
             float: left
+            background-size: cover
+            background-position: center
             &:nth-child(3n)
                 margin-right: 0
+            &.alexa
+                background-image: url(../img/work/alexa.jpg)
+            &.spoticast
+                background-image: url(../img/work/spoticast.png)
+            &.job
+                background-image: url(../img/work/job.jpg)
+            &.scout
+                background-image: url(../img/work/scout.jpg)
+            &.bills
+                background-image: url(../img/work/bills.jpg)
+            &.tia
+                background-image: url(../img/work/tia.jpg)
+            &.matty
+                background-image: url(../img/work/matty.jpg)
+            &.gci
+                background-image: url(../img/work/gci.jpg)
+            &.mta
+                background-image: url(../img/work/mta.jpg)
+
         br
             clear: both

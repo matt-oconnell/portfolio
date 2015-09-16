@@ -29,47 +29,51 @@
             </div>
         </div>
 
-        <!-- Grid -->
+        <!-- Work -->
         <div class="wrap" section-id="grid">
             <div class="title-wrap">
-                <h1>Work</h1>
+                <h1>About</h1>
             </div>
-            <div class="grid-wrap">
-                <div class="grid">
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
-                    <div class="piece"></div>
+            <div class="work-wrap">
+                <div class="work-content">
+                    <a href="experiments/learnings">Blog</a>
+                    <h2>Experiments</h2>
+                    <a href="experiments/spoticast">Spoticast</a>
+                    <p>Convert Spotify playlists to music video playlists</p>
+                    <a href="experiments/mta-sms-alert">MTA Subway Alerts</a>
+                    <p>Notifies you your train is delayed</p>
+                    <a href="experiments/programming-language-comparison">Programming Language Demand Comparison</a>
+                    <p>Compares demand for programming languages using the Indeed and Career Builder APIs</p>
+                    <a href="test">Bills App</a>
+                    <p>App created to facilitate bill payments between roommates (pre venmo)</p>
                     <br>
+                    <h2>Professional</h2>
+                    <a href="https://mtag.io/">Blue Bite mTag Widgets</a>
+                    <a href="http://www.scouttalent.com">Scout Talent</a>
+                    <a href="http://www.tiacibani.com">Tia Cibani</a>
+                    <a href="http://www.alexajayephotography.com">Alexa Photography</a>
+                    <a href="http://globalci.org/">Global Citizens Initiative</a>
+                    <h2>Media</h2>
+                    <a href="http://bluebitenyc.tumblr.com/post/109187536071/h-r-block-provided-consumers-with-a-simple">HR Block</a>
+                    <a href="http://bluebitenyc.tumblr.com/post/115034318561/sxsw-samsung-blogger-lounge-samsung-teamed-up">Samsung Blogger Lounge</a>
+                    <a href="http://bluebitenyc.tumblr.com/post/109188724296/ford-motor-company-teamed-up-with-blue-bite-team">Ford Mustang</a>
+                    <a href="http://bluebitenyc.tumblr.com/post/115034721106/90-minutes-to-proper-fun-together-with-cemusa-and">Bermuda</a>
                 </div>
             </div>
         </div>
 
+
         <!-- About -->
         <div class="wrap" section-id="about">
             <div class="title-wrap">
-                <h1>About</h1>
+                <h1>Work</h1>
             </div>
             <div class="about-wrap">
                 <div class="about-content">
                     <img src="assets/img/bio.png">
                     <p>I'm a web developer living in Brooklyn, NY.</p>
                     <p>Currently, I'm employed as Chief Front End Engineer at a company called Blue Bite. <a href="http://bluebite.com">Check us out!</a> We're doing some pretty cool things centered around augmenting everyday experiences with technology.</p>
-                    <p>Please connect via LinkedIn or send me an email if you're looking to hire for freelance work.</p>
+                    <p>Please connect via <a href="https://www.linkedin.com/in/mattoconnell408">LinkedIn</a> or send me an <a href="mailto:mattoconnell408@gmail.com">email</a> if you're looking to hire for freelance work.</p>
                 </div>
             </div>
         </div>
@@ -81,7 +85,6 @@
         $( document ).ready(function() {
 
             FastClick.attach(document.body);
-            resizeGrid();
 
             $('.nav a').click(function() {
                 var selected = $(this).attr('href'),
@@ -91,15 +94,6 @@
                     selectedEl.addClass('active');
                 }
                 return false;
-            });
-
-            function resizeGrid() {
-                var gridPiece = $('.piece');
-                gridPiece.height(gridPiece.width());
-            }
-
-            $( window ).resize(function() {
-                resizeGrid();
             });
 
         });
