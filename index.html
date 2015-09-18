@@ -6,14 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Economica:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="assets/styles/style.css">
 	</head>
 
 	<body>
         <div class="nav">
-            <a href="intro">Home</a>
-            <a href="grid">Work</a>
-            <a href="about">About</a>
+            <a class="tog" href="intro">Home</a>
+            <a class="tog" href="grid">Work</a>
+            <a class="tog" href="about">About</a>
+            <a href="http://blog.matto.xyz">Blog</a>
         </div>
         <div class="pattern"></div>
 
@@ -36,7 +38,6 @@
             </div>
             <div class="work-wrap">
                 <div class="work-content">
-                    <a href="http://blog.matto.xyz">Blog</a>
                     <h2>Experiments</h2>
                     <a href="http://matto.xyz/experiments/spoticast">Spoticast</a>
                     <p>Convert Spotify playlists to music video playlists</p>
@@ -48,7 +49,7 @@
                     <p>App created to facilitate bill payments between roommates (pre venmo)</p>
                     <br>
                     <h2>Professional</h2>
-                    <a href="https://mtag.io/">Blue Bite mTag Widgets</a>
+                    <a href="https://mtag.io/">Blue Bite mTag Widgets (mobile)</a>
                     <a href="http://www.scouttalent.com">Scout Talent</a>
                     <a href="http://www.tiacibani.com">Tia Cibani</a>
                     <a href="http://www.alexajayephotography.com">Alexa Photography</a>
@@ -86,7 +87,7 @@
 
             FastClick.attach(document.body);
 
-            $('.nav a').click(function() {
+            $('.tog').click(function() {
                 var selected = $(this).attr('href'),
                     selectedEl = $('[section-id="'+selected+'"]');
                 if(!selectedEl.hasClass('active')) {
@@ -95,6 +96,19 @@
                 }
                 return false;
             });
+
+            resizeHeights()
+            $(window).resize(function() {
+                resizeHeights();
+            });
+
+            function resizeHeights() {
+                var h = $(window).height() - 170;
+                console.log(h);
+                $('.work-wrap, .about-wrap').height(h + 'px');
+                console.log($('.about-wrap').css('visibility'));
+                console.log($('.work-wrap').css('visibility'));
+            }
 
         });
     </script>
