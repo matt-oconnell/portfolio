@@ -116,17 +116,16 @@
     </div>
 </div>
 
-<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
 <script src="assets/js/fastclick.js"></script>
 </body>
 <script>
     $(document).ready(function() {
-
         FastClick.attach(document.body);
 
         $('.tog').click(function() {
             var selected = $(this).attr('href'),
-                    selectedEl = $('[section-id="' + selected + '"]');
+                selectedEl = $('[section-id="' + selected + '"]');
             if(!selectedEl.hasClass('active')) {
                 $('.active').removeClass('active');
                 selectedEl.addClass('active');
@@ -141,12 +140,8 @@
 
         function resizeHeights() {
             var h = $(window).height() - 170;
-            console.log(h);
             $('.work-wrap, .about-wrap').height(h + 'px');
-            console.log($('.about-wrap').css('visibility'));
-            console.log($('.work-wrap').css('visibility'));
         }
-
     });
 </script>
 </html>
