@@ -59,10 +59,10 @@
         <div class="work-content">
             <h2>Professional</h2>
             <a href="http://bluebite.com">Blue Bite Homepage</a>
-            <a href="https://mtag.io/p30881353">Rouge Media Salon Pages (Tablet/Mobile)</a>
-            <a href="https://mtag.io/p30929525">Adidas Hypebeast Experience (Mobile)</a>
+            <a href="https://mtag.io/p30881353" class="mobile-click" data-name="Rouge">Rouge Media Salon Pages (Tablet/Mobile)</a>
+            <a href="https://mtag.io/p30929525" class="mobile-click" data-name="Adidas">Adidas Hypebeast Experience (Mobile)</a>
             <a href="http://vaynermedia.com">Vayner Media Homepage</a>
-            <a href="https://mtag.io/">Blue Bite mTag Widgets (Mobile)</a>
+            <a href="https://mtag.io/" class="mobile-click" data-name="mTag Widgets">Blue Bite mTag Widgets (Mobile)</a>
             <a href="http://www.scouttalent.com">Scout Talent</a>
             <a href="http://www.tiacibani.com">Tia Cibani</a>
             <a href="http://www.alexajayephotography.com">Alexa Photography</a>
@@ -118,30 +118,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
 <script src="assets/js/fastclick.js"></script>
-</body>
-<script>
-    $(document).ready(function() {
-        FastClick.attach(document.body);
-
-        $('.tog').click(function() {
-            var selected = $(this).attr('href'),
-                selectedEl = $('[section-id="' + selected + '"]');
-            if(!selectedEl.hasClass('active')) {
-                $('.active').removeClass('active');
-                selectedEl.addClass('active');
-            }
-            return false;
-        });
-
-        resizeHeights();
-        $(window).resize(function() {
-            resizeHeights();
-        });
-
-        function resizeHeights() {
-            var h = $(window).height() - 170;
-            $('.work-wrap, .about-wrap').height(h + 'px');
-        }
-    });
-</script>
+<script src="assets/js/main.js"></script>
+</body> 
 </html>
