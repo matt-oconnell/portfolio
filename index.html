@@ -5,30 +5,15 @@
     <title>Matt O'Connell</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Economica:300,400,700' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700|Economica:300,400,700' rel='stylesheet'
           type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
 <body>
-<script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+<script src="assets/js/analytics.js"></script>
 
-    ga('create', 'UA-65539033-1', 'auto');
-    ga('send', 'pageview');
-
-</script>
 <div class="nav">
     <a class="tog" href="intro">Home</a>
     <a class="tog" href="grid">Work</a>
@@ -41,7 +26,6 @@
 <div class="wrap active" section-id="intro">
     <div class="v-align">
         <p class="title">Matt O'Connell</p>
-
         <p class="subtitle">Web Developer</p>
     </div>
     <div class="icons">
@@ -94,7 +78,6 @@
     </div>
 </div>
 
-
 <!-- About -->
 <div class="wrap" section-id="about">
     <div class="title-wrap">
@@ -106,9 +89,10 @@
 
             <p>I'm a web developer living in Brooklyn, NY.</p>
 
-            <p>Currently, I'm employed as Chief Front End Engineer at a company called Blue Bite. <a
-                    href="http://bluebite.com">Check us out!</a> We're doing some pretty cool things centered around
-                augmenting everyday experiences with technology.</p>
+            <p>Currently, I'm employed as a JS engineer at Adobe working with the
+              <a href="https://behance.com">Behance</a>/
+              <a href="https://myportfolio.com">My Portfolio</a>
+               teams.
 
             <p>Please connect via <a href="https://www.linkedin.com/in/mattoconnell408">LinkedIn</a> or send me an <a
                     href="mailto:matt@matto.xyz">email</a> if you're looking to hire for freelance work.</p>
@@ -118,30 +102,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
 <script src="assets/js/fastclick.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
-<script>
-    $(document).ready(function() {
-        FastClick.attach(document.body);
-
-        $('.tog').click(function() {
-            var selected = $(this).attr('href'),
-                selectedEl = $('[section-id="' + selected + '"]');
-            if(!selectedEl.hasClass('active')) {
-                $('.active').removeClass('active');
-                selectedEl.addClass('active');
-            }
-            return false;
-        });
-
-        resizeHeights();
-        $(window).resize(function() {
-            resizeHeights();
-        });
-
-        function resizeHeights() {
-            var h = $(window).height() - 170;
-            $('.work-wrap, .about-wrap').height(h + 'px');
-        }
-    });
-</script>
 </html>
