@@ -11,6 +11,12 @@ $(document).ready(function() {
         return false;
     });
 
+    $('.mobile-click').click(function() {
+        var href = $(this).attr('href');
+        window.open(href, $(this).data('name'), 'width=320, height=568');
+        return false;
+    });
+
     resizeHeights();
     $(window).resize(function() {
         resizeHeights();
